@@ -1,0 +1,33 @@
+{
+  "scopeName": "inline.mustache.injection",
+  "injectionSelector": "L:string.quoted, L:string.template",
+  "patterns": [
+    {
+      "name": "meta.embedded.inline.mustache",
+      "begin": "(\\{\\{)([#^/]?)([^}]*)",
+      "end": "(\\}\\})",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.mustache"
+        },
+        "2": {
+          "name": "keyword.control.mustache"
+        },
+        "3": {
+          "name": "variable.other.mustache"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.end.mustache"
+        }
+      },
+      "patterns": [
+        {
+          "name": "variable.other.property.mustache",
+          "match": "\\."
+        }
+      ]
+    }
+  ]
+}

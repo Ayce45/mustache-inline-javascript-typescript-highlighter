@@ -1,0 +1,83 @@
+{
+  "name": "mustache-inline-javascript-typescript-highlighter",
+  "displayName": "Mustache Inline JavaScript or TypeScript Highlighter",
+  "description": "Syntax highlighting for Mustache inside JavaScript/TypeScript strings",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "inline.mustache.injection",
+        "path": "./mustache-injection.json",
+        "injectTo": [
+          "source.ts",
+          "source.js",
+          "source.tsx",
+          "source.jsx"
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "Mustache Inline Highlighter",
+      "properties": {
+        "mustacheInline.colors.brackets": {
+          "type": "string",
+          "default": "#C586C0",
+          "description": "Color for brackets {{ and }}"
+        },
+        "mustacheInline.colors.keywords": {
+          "type": "string",
+          "default": "#C586C0",
+          "description": "Color for control keywords (#, ^, /)"
+        },
+        "mustacheInline.colors.variables": {
+          "type": "string",
+          "default": "#9CDCFE",
+          "description": "Color for variables and names"
+        },
+        "mustacheInline.colors.embedded": {
+          "type": "string",
+          "default": "#4EC9B0",
+          "description": "Color for the entire Mustache zone"
+        },
+        "mustacheInline.fontStyle.brackets": {
+          "type": "string",
+          "default": "bold",
+          "enum": [
+            "",
+            "bold",
+            "italic",
+            "bold italic"
+          ],
+          "description": "Font style for brackets"
+        },
+        "mustacheInline.fontStyle.keywords": {
+          "type": "string",
+          "default": "bold",
+          "enum": [
+            "",
+            "bold",
+            "italic",
+            "bold italic"
+          ],
+          "description": "Font style for keywords"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "mustacheInline.applyColors",
+        "title": "Mustache Inline: Apply Colors"
+      }
+    ]
+  }
+}
