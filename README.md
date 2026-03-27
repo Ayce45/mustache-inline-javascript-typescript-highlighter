@@ -140,6 +140,15 @@ const html = `
 
 ## Installation
 
+### From VSIX Package
+
+1. Download the latest `.vsix` file from [Releases](https://github.com/Ayce45/mustache-inline-javascript-typescript-highlighter/releases)
+2. Install via the command line:
+   ```bash
+   code --install-extension mustache-inline-javascript-typescript-highlighter-*.vsix
+   ```
+   Or install via VS Code: `Ctrl+Shift+P` > "Extensions: Install from VSIX..." and select the downloaded file
+
 ### From Local Folder
 
 1. Copy the extension folder to `.vscode/extensions/mustache-inline/`
