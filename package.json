@@ -2,7 +2,7 @@
   "name": "mustache-inline-javascript-typescript-highlighter",
   "displayName": "Mustache Inline JavaScript or TypeScript Highlighter",
   "description": "Syntax highlighting for Mustache inside JavaScript/TypeScript strings",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.50.0"
   },
